@@ -1,7 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  local: MyString
+  identifier: MyString
+  locale: MyString
+  capacity: 1
+  lab: false
 
 two:
-  local: MyString
+  identifier: MyString
+  locale: MyString
+  capacity: 1
+  lab: false

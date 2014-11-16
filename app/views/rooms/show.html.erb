@@ -1,8 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Local:</strong>
-  <%= @room.local %>
+  <strong>Identifier:</strong>
+  <%= @room.identifier %>
+</p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @room.locale %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @room.capacity %>
+</p>
+
+<p>
+  <strong>Lab:</strong>
+  <%= @room.lab %>
 </p>
 
 <%= link_to 'Edit', edit_room_path(@room) %> |

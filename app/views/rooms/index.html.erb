@@ -3,7 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>Local</th>
+      <th>Identifier</th>
+      <th>Locale</th>
+      <th>Capacity</th>
+      <th>Lab</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -11,7 +14,10 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
-        <td><%= room.local %></td>
+        <td><%= room.identifier %></td>
+        <td><%= room.locale %></td>
+        <td><%= room.capacity %></td>
+        <td><%= room.lab %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>

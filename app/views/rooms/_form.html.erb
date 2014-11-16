@@ -12,8 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :local %><br>
-    <%= f.text_field :local %>
+    <%= f.label :identifier %><br>
+    <%= f.text_field :identifier %>
+  </div>
+  <div class="field">
+    <%= f.label :locale %><br>
+    <%= f.text_field :locale %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br>
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :lab %><br>
+    <%= f.check_box :lab %>
   </div>
   <div class="actions">
     <%= f.submit %>
