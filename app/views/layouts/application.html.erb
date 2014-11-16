@@ -3,12 +3,14 @@
 <head>
   <title>Watchman</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= render partial: 'layouts/header' %>
 <%= yield %>
-
+<%= render partial: 'layouts/footer' %>
 </body>
 </html>
