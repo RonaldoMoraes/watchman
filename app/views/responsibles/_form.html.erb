@@ -19,6 +19,18 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+  <div class="field">
+    <%= f.label :birth %><br>
+    <%= f.date_select :birth, :as => :date, :label=>"Birth Date",:order => [:day, :month, :year], :start_year => (Date.current.year-18), :use_month_names => ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], :end_year => (Date.current.year-90), :class=>"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :tel %><br>
+    <%= f.text_field :tel %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

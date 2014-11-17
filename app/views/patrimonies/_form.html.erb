@@ -17,12 +17,44 @@
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.select :status, ["asd", "123"]%>
+    <%= f.select :status, ["Disponível", "Ocupado", "Manutenção", "Inutilizável"]%>
   </div>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+
+
+
+
+
+    <!--
+
+    <select name="post[author_id]">
+      <option value="">Please select</option>
+      <option value="1" selected="selected">D. Heinemeier Hansson</option>
+      <option value="2">D. Thomas</option>
+      <option value="3">M. Clark</option>
+    </select>
+
+    -->
+
+
+
+
+
+
+    <div class="field">
+      <%= f.label :responsible %><br>
+      <%= f.collection_select :responsible_id, Responsible.all, :id, :name %>
+    </div>
+    <div class="field">
+      <%= f.label :room %><br>
+      <%= f.collection_select :room_id, Room.all, :id, :locale %>
+    </div>
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

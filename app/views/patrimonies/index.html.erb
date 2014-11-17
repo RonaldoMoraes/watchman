@@ -4,8 +4,11 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Identifier</th>
       <th>Status</th>
       <th>Description</th>
+      <th>Responsible</th>
+      <th>Room</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,11 +17,14 @@
     <% @patrimonies.each do |patrimony| %>
       <tr>
         <td><%= patrimony.name %></td>
+        <td><%= patrimony.identifier %></td>
         <td><%= patrimony.status %></td>
         <td><%= patrimony.description %></td>
+        <td><%= patrimony.responsible.name %></td>
+        <td><%= patrimony.room.locale %></td>
         <td><%= link_to 'Mostrar', patrimony %></td>
         <td><%= link_to 'Editar', edit_patrimony_path(patrimony) %></td>
-        <td><%= link_to 'Deletar', patrimony, method: :delete, data: { confirm: 'Tem certeza que deseja deletar?' } %></td>
+        <td><%= link_to 'Deletar', patrimony, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

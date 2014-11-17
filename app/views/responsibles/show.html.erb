@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Identifier:</strong>
+  <%= @responsible.identifier %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @responsible.name %>
 </p>
@@ -8,6 +13,21 @@
 <p>
   <strong>Email:</strong>
   <%= @responsible.email %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @responsible.birth %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @responsible.address %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @responsible.tel %>
 </p>
 
 <%= link_to 'Editar', edit_responsible_path(@responsible) %> |

@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Identifier:</strong>
+  <%= @patrimony.identifier %>
+</p>
+
+<p>
   <strong>Status:</strong>
   <%= @patrimony.status %>
 </p>
@@ -13,6 +18,16 @@
 <p>
   <strong>Description:</strong>
   <%= @patrimony.description %>
+</p>
+
+<p>
+  <strong>Responsible:</strong>
+  <%= @patrimony.responsible %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @patrimony.room %>
 </p>
 
 <%= link_to 'Editar', edit_patrimony_path(@patrimony) %> |

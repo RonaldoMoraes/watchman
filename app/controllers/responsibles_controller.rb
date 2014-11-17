@@ -25,7 +25,7 @@ class ResponsiblesController < ApplicationController
   # POST /responsibles.json
   def create
     @responsible = Responsible.new(responsible_params)
-
+    @responsible.identifier = Digest::MD5.hexdigest(@responsible.email.to_s)
     respond_to do |format|
       if @responsible.save
         format.html { redirect_to @responsible, notice: 'Responsible was successfully created.' }
@@ -69,6 +69,6 @@ class ResponsiblesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def responsible_params
-      params.require(:responsible).permit(:name, :email)
+      params.require(:responsible).permit(:identifier, :name, :email, :birth, :address, :tel)
     end
 end

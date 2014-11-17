@@ -1,9 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  identifier: MyString
   name: MyString
   email: MyString
+  birth: 2014-11-17
+  address: MyString
+  tel: MyString
 
 two:
+  identifier: MyString
   name: MyString
   email: MyString
+  birth: 2014-11-17
+  address: MyString
+  tel: MyString

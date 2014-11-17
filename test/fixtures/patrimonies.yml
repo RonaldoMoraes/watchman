@@ -2,10 +2,16 @@
 
 one:
   name: MyString
+  identifier: MyString
   status: MyString
   description: MyText
+  responsible_id: 
+  room_id: 
 
 two:
   name: MyString
+  identifier: MyString
   status: MyString
   description: MyText
+  responsible_id: 
+  room_id: 

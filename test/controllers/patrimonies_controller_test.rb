@@ -18,7 +18,7 @@ class PatrimoniesControllerTest < ActionController::TestCase
 
   test "should create patrimony" do
     assert_difference('Patrimony.count') do
-      post :create, patrimony: { description: @patrimony.description, name: @patrimony.name, status: @patrimony.status }
+      post :create, patrimony: { description: @patrimony.description, identifier: @patrimony.identifier, name: @patrimony.name, responsible_id: @patrimony.responsible_id, room_id: @patrimony.room_id, status: @patrimony.status }
     end
 
     assert_redirected_to patrimony_path(assigns(:patrimony))
@@ -35,7 +35,7 @@ class PatrimoniesControllerTest < ActionController::TestCase
   end
 
   test "should update patrimony" do
-    patch :update, id: @patrimony, patrimony: { description: @patrimony.description, name: @patrimony.name, status: @patrimony.status }
+    patch :update, id: @patrimony, patrimony: { description: @patrimony.description, identifier: @patrimony.identifier, name: @patrimony.name, responsible_id: @patrimony.responsible_id, room_id: @patrimony.room_id, status: @patrimony.status }
     assert_redirected_to patrimony_path(assigns(:patrimony))
   end
 

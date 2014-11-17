@@ -18,7 +18,7 @@ class ResponsiblesControllerTest < ActionController::TestCase
 
   test "should create responsible" do
     assert_difference('Responsible.count') do
-      post :create, responsible: { email: @responsible.email, name: @responsible.name }
+      post :create, responsible: { address: @responsible.address, birth: @responsible.birth, email: @responsible.email, identifier: @responsible.identifier, name: @responsible.name, tel: @responsible.tel }
     end
 
     assert_redirected_to responsible_path(assigns(:responsible))
@@ -35,7 +35,7 @@ class ResponsiblesControllerTest < ActionController::TestCase
   end
 
   test "should update responsible" do
-    patch :update, id: @responsible, responsible: { email: @responsible.email, name: @responsible.name }
+    patch :update, id: @responsible, responsible: { address: @responsible.address, birth: @responsible.birth, email: @responsible.email, identifier: @responsible.identifier, name: @responsible.name, tel: @responsible.tel }
     assert_redirected_to responsible_path(assigns(:responsible))
   end
 

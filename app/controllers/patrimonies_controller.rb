@@ -26,6 +26,9 @@ class PatrimoniesController < ApplicationController
   def create
     @patrimony = Patrimony.new(patrimony_params)
 
+    @patrimony.identifier = Digest::MD5.hexdigest(Time.now.strftime("%Y-%d-%m %H:%M:%S %Z").to_s)
+
+
     respond_to do |format|
       if @patrimony.save
         format.html { redirect_to @patrimony, notice: 'Patrimony was successfully created.' }
@@ -41,6 +44,7 @@ class PatrimoniesController < ApplicationController
   # PATCH/PUT /patrimonies/1.json
   def update
     respond_to do |format|
+
       if @patrimony.update(patrimony_params)
         format.html { redirect_to @patrimony, notice: 'Patrimony was successfully updated.' }
         format.json { render :show, status: :ok, location: @patrimony }
@@ -69,6 +73,6 @@ class PatrimoniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patrimony_params
-      params.require(:patrimony).permit(:name, :status, :description)
+      params.require(:patrimony).permit(:name, :identifier, :status, :description, :responsible_id, :room_id)
     end
 end
