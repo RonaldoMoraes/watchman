@@ -14,9 +14,9 @@
       <tr>
         <td><%= responsible.name %></td>
         <td><%= responsible.email %></td>
-        <td><%= link_to 'Show', responsible %></td>
-        <td><%= link_to 'Edit', edit_responsible_path(responsible) %></td>
-        <td><%= link_to 'Destroy', responsible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', responsible %></td>
+        <td><%= link_to 'Editar', edit_responsible_path(responsible) %></td>
+        <td><%= link_to 'Deletar', responsible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Responsible', new_responsible_path %>
+<%= link_to 'Novo Responsável', new_responsible_path %>

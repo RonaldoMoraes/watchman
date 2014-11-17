@@ -16,9 +16,9 @@
         <td><%= patrimony.name %></td>
         <td><%= patrimony.status %></td>
         <td><%= patrimony.description %></td>
-        <td><%= link_to 'Show', patrimony %></td>
-        <td><%= link_to 'Edit', edit_patrimony_path(patrimony) %></td>
-        <td><%= link_to 'Destroy', patrimony, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', patrimony %></td>
+        <td><%= link_to 'Editar', edit_patrimony_path(patrimony) %></td>
+        <td><%= link_to 'Deletar', patrimony, method: :delete, data: { confirm: 'Tem certeza que deseja deletar?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Patrimony', new_patrimony_path %>
+<%= link_to 'Novo Patrimônio', new_patrimony_path %>
