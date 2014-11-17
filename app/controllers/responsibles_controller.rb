@@ -28,7 +28,7 @@ class ResponsiblesController < ApplicationController
     @responsible.identifier = Digest::MD5.hexdigest(@responsible.email.to_s)
     respond_to do |format|
       if @responsible.save
-        format.html { redirect_to @responsible, notice: 'Responsible was successfully created.' }
+        format.html { redirect_to @responsible, notice: 'Responsável criado com sucesso.' }
         format.json { render :show, status: :created, location: @responsible }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ResponsiblesController < ApplicationController
   def update
     respond_to do |format|
       if @responsible.update(responsible_params)
-        format.html { redirect_to @responsible, notice: 'Responsible was successfully updated.' }
+        format.html { redirect_to @responsible, notice: 'Responsável atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @responsible }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ResponsiblesController < ApplicationController
   def destroy
     @responsible.destroy
     respond_to do |format|
-      format.html { redirect_to responsibles_url, notice: 'Responsible was successfully destroyed.' }
+      format.html { redirect_to responsibles_url, notice: 'Responsável deletado com sucesso.' }
       format.json { head :no_content }
     end
   end

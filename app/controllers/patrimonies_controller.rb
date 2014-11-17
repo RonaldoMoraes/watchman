@@ -40,6 +40,9 @@ class PatrimoniesController < ApplicationController
     end
   end
 
+
+
+
   # PATCH/PUT /patrimonies/1
   # PATCH/PUT /patrimonies/1.json
   def update
