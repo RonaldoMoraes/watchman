@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users', to: 'users#index'
+
+  #get 'users/show/:id'
+
+  get 'user/:id', to: 'users#show'
+
   devise_for :users
   resources :patrimonies
 
