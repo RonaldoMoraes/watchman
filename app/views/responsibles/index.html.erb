@@ -1,13 +1,13 @@
-<h1>Listing responsibles</h1>
+<h1>Responsáveis Cadastrados</h1>
 
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Birth</th>
-      <th>Address</th>
-      <th>Tel</th>
+      <th>Nome</th>
+      <th>E-Mail</th>
+      <th>Data de Nascimento</th>
+      <th>Endereço</th>
+      <th>Telefone</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,7 +22,7 @@
         <td><%= responsible.tel %></td>
         <td><%= link_to 'Mostrar', responsible %></td>
         <td><%= link_to 'Editar', edit_responsible_path(responsible) %></td>
-        <td><%= link_to 'Deletar', responsible, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Deletar', responsible, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,7 +1,7 @@
 <%= form_for(@responsible) do |f| %>
   <% if @responsible.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@responsible.errors.count, "error") %> prohibited this responsible from being saved:</h2>
+      <h2><%= pluralize(@responsible.errors.count, "error") %> proibiu o salvamento deste responsável:</h2>
 
       <ul>
       <% @responsible.errors.full_messages.each do |message| %>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :birth %><br>
-    <%= f.date_select :birth, :as => :date, :label=>"Birth Date",:order => [:day, :month, :year], :start_year => (Date.current.year-18), :use_month_names => ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], :end_year => (Date.current.year-90), :class=>"form-control" %>
+    <%= f.date_select :birth, :as => :date, :label=>"Data de Nascimento",:order => [:day, :month, :year], :start_year => (Date.current.year-18), :use_month_names => ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], :end_year => (Date.current.year-90), :class=>"form-control" %>
   </div>
   <div class="field">
     <%= f.label :address %><br>

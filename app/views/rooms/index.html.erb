@@ -1,12 +1,12 @@
-<h1>Listing rooms</h1>
+<h1>Salas Cadastradas</h1>
 
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Identifier</th>
-      <th>Locale</th>
-      <th>Capacity</th>
-      <th>Lab</th>
+      <th>Identificador</th>
+      <th>Local</th>
+      <th>Capacidade</th>
+      <th>Laboratório</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,7 +20,7 @@
         <td><%= room.lab %></td>
         <td><%= link_to 'Mostrar', room %></td>
         <td><%= link_to 'Editar', edit_room_path(room) %></td>
-        <td><%= link_to 'Deletar', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Deletar', room, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>

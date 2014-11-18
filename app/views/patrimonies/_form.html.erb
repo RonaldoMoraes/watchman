@@ -1,7 +1,7 @@
 <%= form_for(@patrimony) do |f| %>
   <% if @patrimony.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@patrimony.errors.count, "error") %> prohibited this patrimony from being saved:</h2>
+      <h2><%= pluralize(@patrimony.errors.count, "error") %> proibiu este patrimônio de ser salvo:</h2>
 
       <ul>
       <% @patrimony.errors.full_messages.each do |message| %>
