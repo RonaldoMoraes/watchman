@@ -22,12 +22,12 @@
 
 <p>
   <strong>Responsible:</strong>
-  <%= @patrimony.responsible %>
+  <%= @patrimony.responsible.name %>
 </p>
 
 <p>
   <strong>Room:</strong>
-  <%= @patrimony.room %>
+  <%= @patrimony.room.locale %>
 </p>
 
 <%= link_to 'Editar', edit_patrimony_path(@patrimony) %> |

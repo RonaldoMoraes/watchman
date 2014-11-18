@@ -1,24 +1,15 @@
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <td><%= link_to 'Home', home_index_path %></td>
-      <td><%= link_to 'Patrimonios', patrimonies_path %></td>
-      <td><%= link_to 'Responsáveis', responsibles_path %></td>
-      <td><%= link_to 'Salas', rooms_path %></td>
-      <td><%= link_to 'Sair', destroy_user_session_path, method: :delete %></td>
-    </tr>
-  </thead>
-</table>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <a class="navbar-brand" href="/"></a>
+        <li><%= link_to 'Home', home_index_path %></li>
+        <li><%= link_to 'Patrimonios', patrimonies_path %></li>
+        <li><%= link_to 'Responsáveis', responsibles_path %></li>
+        <li><%= link_to 'Salas', rooms_path %></li>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-<!-- Comentário HTML
-
-<%= link_to 'Responsáveis', responsibles_path %>
-é o mesmo que
-<a href="<%=responsibles_path%>">
-ou
-<a href="/responsibles">
-
--->
+      </ul>
+      <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: "sair" if current_user %>
+    </div>
+  </div>
+</nav>
