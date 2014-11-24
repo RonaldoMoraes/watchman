@@ -12,19 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :locale %><br>
+    <%= f.label "Local:" %><br>
     <%= f.text_field :locale %>
   </div>
   <div class="field">
-    <%= f.label :capacity %><br>
+    <%= f.label "Capacidade:" %><br>
     <%= f.number_field :capacity %>
   </div>
   <div class="field">
-    <%= f.label :lab %><br>
+    <%= f.label "É laboratório?" %><br>
     <%= f.check_box :lab %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Criar Sala", class: "btn btn-success" %>
   </div>
 <% end %>

@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Nome:" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label "E-Mail:" %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :birth %><br>
+    <%= f.label "Data de Nascimento:" %><br>
     <%= f.date_select :birth, :as => :date, :label=>"Data de Nascimento",:order => [:day, :month, :year], :start_year => (Date.current.year-18), :use_month_names => ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], :end_year => (Date.current.year-90), :class=>"form-control" %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
+    <%= f.label "Endereço:" %><br>
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :tel %><br>
+    <%= f.label "Telefone:" %><br>
     <%= f.text_field :tel %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Criar Responsável", class: "btn btn-success" %>
   </div>
 <% end %>
