@@ -7,6 +7,7 @@
         <li><%= link_to 'Patrimônios', patrimonies_path %></li>
         <li><%= link_to 'Responsáveis', responsibles_path %></li>
         <li><%= link_to 'Salas', rooms_path %></li>
+        <li><%= link_to 'Usuários', '/users' %></li>
 
       </ul>
       <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: "sair" if current_user %>
