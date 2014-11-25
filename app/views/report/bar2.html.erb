@@ -1,0 +1,155 @@
+<script type="text/javascript">
+
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+
+            ['Disponível', <%= @disponivel.size %>],
+            ['Ocupado', <%= @ocupado.size %>],
+            ['Manutenção', <%= @manutencao.size %>],
+            ['Inutilizado', <%= @inutilizado.size %>]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Patrimonios por Status',
+            'width':700,
+            'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>
+
+<div id="chart_div"></div>
+
+<hr>
+<% if @disponivel.size %>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th></th>
+    <th>Patrimônios</th>
+    <th>Identificação</th>
+    <th>Responsável</th>
+    <th>Sala</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% i= 1 %>
+  <% @disponivel.each do |patrimony| %>
+      <tr>
+        <td><%= i %></td>
+        <td><%= patrimony.name %></td>
+        <td><%= patrimony.identifier %></td>
+        <td><%= patrimony.responsible.name %></td>
+        <td><%= patrimony.room.locale %></td>
+      </tr>
+      <% i += 1 %>
+  <% end %>
+  </tbody>
+</table>
+    <hr>
+<% end %>
+
+<% if @ocupado.size > 0 %>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Patrimônios</th>
+        <th>Identificação</th>
+        <th>Responsável</th>
+        <th>Sala</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% i= 1 %>
+      <% @ocupado.each do |patrimony| %>
+          <tr>
+            <td><%= i %></td>
+            <td><%= patrimony.name %></td>
+            <td><%= patrimony.identifier %></td>
+            <td><%= patrimony.responsible.name %></td>
+            <td><%= patrimony.room.locale %></td>
+          </tr>
+          <% i += 1 %>
+      <% end %>
+      </tbody>
+    </table>
+    <hr>
+<% end %>
+
+
+<% if @manutencao.size > 0 %>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Patrimônios</th>
+        <th>Identificação</th>
+        <th>Responsável</th>
+        <th>Sala</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% i= 1 %>
+      <% @manutencao.each do |patrimony| %>
+          <tr>
+            <td><%= i %></td>
+            <td><%= patrimony.name %></td>
+            <td><%= patrimony.identifier %></td>
+            <td><%= patrimony.responsible.name %></td>
+            <td><%= patrimony.room.locale %></td>
+          </tr>
+          <% i += 1 %>
+      <% end %>
+      </tbody>
+    </table>
+    <hr>
+<% end %>
+
+<% if @inutilizado.size > 0 %>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Patrimônios</th>
+        <th>Identificação</th>
+        <th>Responsável</th>
+        <th>Sala</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% i= 1 %>
+      <% @inutilizado.each do |patrimony| %>
+          <tr>
+            <td><%= i %></td>
+            <td><%= patrimony.name %></td>
+            <td><%= patrimony.identifier %></td>
+            <td><%= patrimony.responsible.name %></td>
+            <td><%= patrimony.room.locale %></td>
+          </tr>
+          <% i += 1 %>
+      <% end %>
+      </tbody>
+    </table>
+    <hr>
+<% end %>
