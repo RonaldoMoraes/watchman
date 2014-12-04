@@ -33,6 +33,10 @@
 }
 */
 
+body{
+    background: url("/images/ice-unifei3.jpg");
+}
+
 
 #direita{
     position: absolute;
