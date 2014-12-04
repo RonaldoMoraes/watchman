@@ -1,0 +1,68 @@
+<script type="text/javascript">
+
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+            <% @responsible.each do |item| %>
+                ['<%= item.name %>', <%= item.patrimonies.size %>],
+            <% end %>
+
+        ]);
+
+        // Set chart options
+        var options = {'title':'Patrimonios por Responsáveis',
+            'width':700,
+            'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>
+
+  <div id="chart_div"></div>
+
+
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Responsável</th>
+      <th>Patrimônios</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% i= 1 %>
+    <% Responsible.all.each do |resp| %>
+        <tr>
+          <td><%= i %></td>
+          <td><%= link_to resp.name, responsible_path(resp) %></td>
+          </tr>
+          <% j = 0 %>
+          <% resp.patrimonies.each do |patrimony| %>
+            <tr>
+              <td></td>
+              <td style="text-align: right"><%= j += 1 %></td>
+              <td><%= link_to patrimony.name, patrimony_path(patrimony) %></td>
+            </tr>
+          <% end %>
+          <% i += 1 %>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
