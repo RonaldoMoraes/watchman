@@ -20,7 +20,7 @@
         <td><%= room.lab %></td>
         <td><%= link_to 'Mostrar', room %></td>
         <td><%= link_to 'Editar', edit_room_path(room) %></td>
-        <td><%= link_to 'Deletar', room, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', room, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
