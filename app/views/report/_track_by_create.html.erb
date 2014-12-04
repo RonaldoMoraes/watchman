@@ -1,0 +1,18 @@
+<table class="table table-bordered table-responsive table-stripped">
+  <thead>
+    <tr>
+      <th>Ação</th>
+      <th>Entidade</th>
+      <th>Dia e hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @track.each do |track| %>
+        <tr>
+          <td><%= track.action %></td>
+          <td><%= track.model %></td>
+          <td><%= track.created_at.strftime("%d/%m/%Y - %H:%M") %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

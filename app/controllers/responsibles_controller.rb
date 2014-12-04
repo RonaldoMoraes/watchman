@@ -1,5 +1,11 @@
 class ResponsiblesController < ApplicationController
   before_action :set_responsible, only: [:show, :edit, :update, :destroy]
+  before_action :set_track, only: [:create, :update, :destroy]
+
+  def set_track
+    @track = Track.new({model: "Responsáveis", action: action_name.to_s, user_id: current_user.id})
+    @track.save
+  end
 
   # GET /responsibles
   # GET /responsibles.json

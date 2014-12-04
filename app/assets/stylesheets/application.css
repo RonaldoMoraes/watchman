@@ -22,21 +22,20 @@
     background-color: dodgerblue;
 }
 */
-/*
+
 .background{
-    width: 1200px;
-    height: 569px;
-    background: url("/images/ice-unifei.jpg");
+    width: 100%;
+    height: 560px;
+    background: url("/images/ice-unifei3.jpg");
     position: relative;
-    left: -40px;
-
+    top: -20px;
 }
-*/
 
-body{
+/*
+.body-index{
     background: url("/images/ice-unifei3.jpg");
 }
-
+*/
 
 #direita{
     position: absolute;

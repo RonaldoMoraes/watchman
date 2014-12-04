@@ -16,8 +16,8 @@
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-            ['Laboratório', <%= @patrimonio_lab.size %>],
-            ['Sala', <%= @patrimonio_room.size %>]
+            ['Patrimônios em Laboratórios', <%= @patrimonio_lab.size %>],
+            ['Patrimônios em Salas', <%= @patrimonio_room.size %>]
         ]);
 
         // Set chart options
