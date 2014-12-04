@@ -1,33 +1,31 @@
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <td><%= @responsible.name %></td>
+  </tr>
+  <tr>
+    <th>Identificador</th>
+    <td><%= @responsible.identifier %></td>
+  </tr>
+  <tr>
+    <th>E-Mail</th>
+    <td><%= @responsible.email %></td>
+  </tr>
+  <tr>
+    <th>Data de Nascimento</th>
+    <td><%= @responsible.birth %></td>
+  </tr>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @responsible.name %>
-</p>
+  <tr>
+    <th>Endereço</th>
+    <td><%= @responsible.address %></td>
+  </tr>
+  <tr>
+    <th>Telefone</th>
+    <td><%= @responsible.tel %></td>
+  </tr>
+</table>
 
-<p>
-  <strong>Identificador:</strong>
-  <%= @responsible.identifier %>
-</p>
-
-<p>
-  <strong>E-Mail:</strong>
-  <%= @responsible.email %>
-</p>
-
-<p>
-  <strong>Data de Nascimento:</strong>
-  <%= @responsible.birth %>
-</p>
-
-<p>
-  <strong>Endereço:</strong>
-  <%= @responsible.address %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @responsible.tel %>
-</p>
-
-<%= link_to 'Editar', edit_responsible_path(@responsible) %> |
-<%= link_to 'Voltar', responsibles_path %>
+<%= link_to 'Editar', edit_responsible_path(@responsible), class: "btn btn-default" %>
+<%= link_to 'Voltar', responsibles_path, class: "btn btn-default" %>

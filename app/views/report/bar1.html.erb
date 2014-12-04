@@ -13,8 +13,8 @@
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'Responsáveis');
+        data.addColumn('number', 'Patrimônios');
         data.addRows([
             <% @responsible.each do |item| %>
                 ['<%= item.name %>', <%= item.patrimonies.size %>],

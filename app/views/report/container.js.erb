@@ -1,0 +1,6 @@
+$("<%=@div%>").fadeOut(function(){
+    $("<%=@div%>").html("<%= escape_javascript(render(:partial => @caminho)) %>");
+
+    //$(".pagination").find("a").attr("data-remote", true);
+    $("<%=@div%>").fadeIn();
+});

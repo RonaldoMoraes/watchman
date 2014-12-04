@@ -1,24 +1,22 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Identificador</th>
+    <td><%= @room.identifier %></td>
 
+  </tr>
+  <tr>
+    <th>Local</th>
+    <td><%= @room.locale %></td>
+  </tr>
+  <tr>
+    <th>Capacidade</th>
+    <td><%= @room.capacity %></td>
+  </tr>
+  <tr>
+    <th>Laboratório</th>
+    <td><%= @room.lab %></td>
+  </tr>
+</table>
 
-<p>
-  <strong>Identificador:</strong>
-  <%= @room.identifier %>
-</p>
-
-<p>
-  <strong>Local:</strong>
-  <%= @room.locale %>
-</p>
-
-<p>
-  <strong>Capacidade:</strong>
-  <%= @room.capacity %>
-</p>
-
-<p>
-  <strong>Laboratório:</strong>
-  <%= @room.lab %>
-</p>
-
-<%= link_to 'Editar', edit_room_path(@room) %> |
-<%= link_to 'Voltar', rooms_path %>
+<%= link_to 'Editar', edit_room_path(@room), class: "btn btn-default" %>
+<%= link_to 'Voltar', rooms_path, class: "btn btn-default" %>

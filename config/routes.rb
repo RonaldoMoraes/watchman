@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'report/tc2'
+  post 'report/track_by_create'
 
+  get 'report/tc1'
   get 'report/pizza1'
   get 'report/bar1'
   get 'report/bar2'

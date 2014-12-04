@@ -1,6 +1,6 @@
 <h1>Salas Cadastradas</h1>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Identificador</th>
@@ -20,7 +20,7 @@
         <td><%= room.lab %></td>
         <td><%= link_to 'Mostrar', room %></td>
         <td><%= link_to 'Editar', edit_room_path(room) %></td>
-        <td><%= link_to 'Deletar', room, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', room, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'Nova Sala', new_room_path %>
+<%= link_to 'Nova Sala', new_room_path, class: "btn btn-default" %>

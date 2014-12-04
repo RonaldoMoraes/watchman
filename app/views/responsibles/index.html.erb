@@ -1,6 +1,6 @@
 <h1>Responsáveis Cadastrados</h1>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Nome</th>
@@ -22,7 +22,7 @@
         <td><%= responsible.tel %></td>
         <td><%= link_to 'Mostrar', responsible %></td>
         <td><%= link_to 'Editar', edit_responsible_path(responsible) %></td>
-        <td><%= link_to 'Deletar', responsible, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', responsible, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'Novo Responsável', new_responsible_path %>
+<%= link_to 'Novo Responsável', new_responsible_path, class: "btn btn-default" %>

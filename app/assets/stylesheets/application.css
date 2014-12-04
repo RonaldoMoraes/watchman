@@ -23,6 +23,35 @@
 }
 */
 
+.background{
+    width: 100%;
+    height: 560px;
+    background: url("/images/ice-unifei3.jpg");
+    position: relative;
+    top: -20px;
+}
+
+/*
+.body-index{
+    background: url("/images/ice-unifei3.jpg");
+}
+*/
+
+#direita{
+    position: absolute;
+    left: 170px;
+    top: 40px;
+}
+
+
+.logo-unifei img{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 30px;
+    top: 40px;
+}
+
 .login-screen {
     border: 1px solid darkgray;
     margin-top: 120px;

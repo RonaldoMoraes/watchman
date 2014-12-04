@@ -1,6 +1,6 @@
 <h1>Patrimônios Cadastrados</h1>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Nome</th>
@@ -24,7 +24,7 @@
         <td><%= patrimony.room.locale %></td>
         <td><%= link_to 'Mostrar', patrimony %></td>
         <td><%= link_to 'Editar', edit_patrimony_path(patrimony) %></td>
-        <td><%= link_to 'Deletar', patrimony, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', patrimony, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'Novo Patrimônio', new_patrimony_path %>
+<%= link_to 'Novo Patrimônio', new_patrimony_path, class: "btn btn-default"%>

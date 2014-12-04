@@ -4,7 +4,6 @@
   <title>Watchman</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
-
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -13,16 +12,27 @@
 <body>
     <%= render partial: 'layouts/header' if current_user%>
     <%= render partial: 'layouts/alerts' %>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-         <%= yield %>
+
+
+
+    <% if controller_name != 'home'  %>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+    <% end %>
+
+    <%= yield %>
+
+    <% if controller_name != 'home'  %>
+              </div>
           </div>
-      </div>
-    </div>
+        </div>
+    <% end %>
+
+
     <%= render partial: 'layouts/footer' %>
 
     <!-- Referências JS -->
-
+   
 </body>
 </html>

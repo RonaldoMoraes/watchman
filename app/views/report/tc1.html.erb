@@ -1,0 +1,31 @@
+<!--
+<form method="get" action="/report/track_by_create" accept-charset="UTF-8">
+-->
+<h1 style="text-align: center">Gerar relatório de ações de usuários</h1>
+<p><span class="label label-default">Atenção: Somente as ações realizadas depois do dia 04/12 foram registradas</span></p>
+<%= form_for("/report/track_by_create", url: '/report/track_by_create', remote: true) do |f| %>
+
+  <%#= date_select('range', 'start_date', :order => [:day, :month, :year])%>
+    <br>
+  <%#= date_select('range', 'end_date', :order => [:day, :month, :year])%>
+
+    <div class="field">
+      <label for="_report_track_by_create_Usuários:">Usuários:</label><br>
+
+      <select name="/report/track_by_create[user_id]" id="_report_track_by_create_user_id">
+        <% User.all.each do |user| %>
+            <option value="<%= user.id %>"><%= user.email %></option>
+        <% end %>
+      </select>
+
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Gerar Relatório", class: "btn btn-warning"%>
+    </div>
+
+<% end %>
+
+<div id="track-by-create">
+
+</div>

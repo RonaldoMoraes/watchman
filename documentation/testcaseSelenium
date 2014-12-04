@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:3000/" />
+<title>testcaseSelenium</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">testcaseSelenium</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/home/index</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTitle</td>
+	<td>Watchman</td>
+	<td>Watchman</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Patrimônios</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/patrimonies</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.col-md-12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Responsáveis</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/responsibles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Watchman</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Salas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/rooms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-md-12</td>
+	<td>Salas Cadastradas Identificador Local Capacidade Laboratório c8886111431e904f1d18616dc91698f2 X1303 50 false Mostrar Editar Excluir 052442b94c0426d4dec591efababb189 B4109 55 false Mostrar Editar Excluir 1d81419e82362fa15ab341007a6c75ab Lab3D 40 true Mostrar Editar Excluir 5b06f82a6746a44da2725c6b8b98f830 LDC5 ICE 45 true Mostrar Editar Excluir <br /> Nova Sala</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Usuários</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=html</td>
+	<td>E-mail</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Relatórios</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Ações por usuário</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/report/tc1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.field</td>
+	<td>ronaldo.moraes1990@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Relatórios</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Conta</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Configurações de Conta</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.navbar-brand</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/home/index</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

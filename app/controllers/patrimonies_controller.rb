@@ -1,5 +1,11 @@
 class PatrimoniesController < ApplicationController
   before_action :set_patrimony, only: [:show, :edit, :update, :destroy]
+  before_action :set_track, only: [:create, :update, :destroy]
+
+  def set_track
+    @track = Track.new({model: "Patrimônios", action: action_name.to_s, user_id: current_user.id})
+    @track.save
+  end
 
   # GET /patrimonies
   # GET /patrimonies.json
