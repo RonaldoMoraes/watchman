@@ -51,14 +51,14 @@
     <% Responsible.all.each do |resp| %>
         <tr>
           <td><%= i %></td>
-          <td><%= resp.name %></td>
+          <td><%= link_to resp.name, responsible_path(resp) %></td>
           </tr>
           <% j = 0 %>
           <% resp.patrimonies.each do |patrimony| %>
             <tr>
               <td></td>
               <td style="text-align: right"><%= j += 1 %></td>
-              <td><%= patrimony.name %></td>
+              <td><%= link_to patrimony.name, patrimony_path(patrimony) %></td>
             </tr>
           <% end %>
           <% i += 1 %>

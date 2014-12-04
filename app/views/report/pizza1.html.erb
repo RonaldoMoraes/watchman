@@ -50,7 +50,7 @@
       <% Patrimony.all.each do |patrimony| %>
           <tr>
             <td><%= i %></td>
-            <td><%= patrimony.name %></td>
+            <td><%= link_to patrimony.name, patrimony_path(patrimony) %></td>
             <td><%= patrimony.identifier %></td>
             <td><%= patrimony.room.lab ? "Lab" : "Sala" %></td>
             <% i += 1 %>

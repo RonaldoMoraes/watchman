@@ -38,6 +38,7 @@
 
 <hr>
 <% if @disponivel.size %>
+    <h2 style="text-align: center">Disponível</h2>
 <table class="table table-bordered">
   <thead>
   <tr>
@@ -54,10 +55,10 @@
   <% @disponivel.each do |patrimony| %>
       <tr>
         <td><%= i %></td>
-        <td><%= patrimony.name %></td>
+        <td><%= link_to patrimony.name, patrimony_path(patrimony) %></td>
         <td><%= patrimony.identifier %></td>
-        <td><%= patrimony.responsible.name %></td>
-        <td><%= patrimony.room.locale %></td>
+        <td><%= link_to patrimony.responsible.name, responsible_path(patrimony.responsible) %></td>
+        <td><%= link_to patrimony.room.locale, room_path(patrimony.room) %></td>
       </tr>
       <% i += 1 %>
   <% end %>
@@ -67,6 +68,7 @@
 <% end %>
 
 <% if @ocupado.size > 0 %>
+    <h2 style="text-align: center">Ocupado</h2>
     <table class="table table-bordered">
       <thead>
       <tr>
@@ -83,10 +85,10 @@
       <% @ocupado.each do |patrimony| %>
           <tr>
             <td><%= i %></td>
-            <td><%= patrimony.name %></td>
+            <td><%= link_to patrimony.name, patrimony_path(patrimony) %></td>
             <td><%= patrimony.identifier %></td>
-            <td><%= patrimony.responsible.name %></td>
-            <td><%= patrimony.room.locale %></td>
+            <td><%= link_to patrimony.responsible.name, responsible_path(patrimony.responsible) %></td>
+            <td><%= link_to patrimony.room.locale, room_path(patrimony.room) %></td>
           </tr>
           <% i += 1 %>
       <% end %>
@@ -97,6 +99,7 @@
 
 
 <% if @manutencao.size > 0 %>
+    <h2 style="text-align: center">Manutenção</h2>
     <table class="table table-bordered">
       <thead>
       <tr>
@@ -113,10 +116,10 @@
       <% @manutencao.each do |patrimony| %>
           <tr>
             <td><%= i %></td>
-            <td><%= patrimony.name %></td>
+            <td><%= link_to patrimony.name, patrimony_path(patrimony) %></td>
             <td><%= patrimony.identifier %></td>
-            <td><%= patrimony.responsible.name %></td>
-            <td><%= patrimony.room.locale %></td>
+            <td><%= link_to patrimony.responsible.name, responsible_path(patrimony.responsible) %></td>
+            <td><%= link_to patrimony.room.locale, room_path(patrimony.room) %></td>
           </tr>
           <% i += 1 %>
       <% end %>
@@ -126,6 +129,7 @@
 <% end %>
 
 <% if @inutilizado.size > 0 %>
+    <h2 style="text-align: center">Inutilizado</h2>
     <table class="table table-bordered">
       <thead>
       <tr>
@@ -142,10 +146,10 @@
       <% @inutilizado.each do |patrimony| %>
           <tr>
             <td><%= i %></td>
-            <td><%= patrimony.name %></td>
+            <td><%= link_to patrimony.name, patrimony_path(patrimony) %></td>
             <td><%= patrimony.identifier %></td>
-            <td><%= patrimony.responsible.name %></td>
-            <td><%= patrimony.room.locale %></td>
+            <td><%= link_to patrimony.responsible.name, responsible_path(patrimony.responsible) %></td>
+            <td><%= link_to patrimony.room.locale, room_path(patrimony.room) %></td>
           </tr>
           <% i += 1 %>
       <% end %>
