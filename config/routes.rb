@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  get 'report/pizza1'
+  get 'report/bar1'
+  get 'report/bar2'
+
+  get 'report/room'
+  get 'report/responsible'
+
   get 'users', to: 'users#index'
 
   #get 'users/show/:id'
