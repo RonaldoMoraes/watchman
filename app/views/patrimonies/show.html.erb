@@ -1,33 +1,34 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Nome</th>
+    <td><%= @patrimony.name %></td>
+  </tr>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @patrimony.name %>
-</p>
+  <tr>
+    <th>Identificador</th>
+    <td><%= @patrimony.identifier %></td>
+  </tr>
 
-<p>
-  <strong>Identificador:</strong>
-  <%= @patrimony.identifier %>
-</p>
+  <tr>
+    <th>Status</th>
+    <td><%= @patrimony.status %></td>
+  </tr>
 
-<p>
-  <strong>Status:</strong>
-  <%= @patrimony.status %>
-</p>
+  <tr>
+    <th>Descrição</th>
+    <td><%= @patrimony.description %></td>
+  </tr>
 
-<p>
-  <strong>Descrição:</strong>
-  <%= @patrimony.description %>
-</p>
+  <tr>
+    <th>Responsável</th>
+    <td><%= @patrimony.responsible.name %></td>
+  </tr>
 
-<p>
-  <strong>Responsável:</strong>
-  <%= @patrimony.responsible.name %>
-</p>
+  <tr>
+    <th>Sala</th>
+    <td><%= @patrimony.room.locale %></td>
+  </tr>
+</table>
 
-<p>
-  <strong>Sala:</strong>
-  <%= @patrimony.room.locale %>
-</p>
-
-<%= link_to 'Editar', edit_patrimony_path(@patrimony) %> |
-<%= link_to 'Voltar', patrimonies_path %>
+<%= link_to 'Editar', edit_patrimony_path(@patrimony), class: "btn btn-default" %>
+<%= link_to 'Voltar', patrimonies_path, class: "btn btn-default" %>

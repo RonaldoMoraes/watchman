@@ -1,9 +1,13 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Email</th>
+    <td><%= @user.email%></td>
+  </tr>
+</table>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email%>
-</p>
+<%= link_to 'Voltar', users_path, class: "btn btn-default" %>
 
 
-<%#= link_to 'Editar', edit_user_path(@user) %>
-<%= link_to 'Voltar', users_path %>
+
+
+
